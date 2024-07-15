@@ -1,0 +1,121 @@
+the same contents and format of index.php  above Enable this Functionality .
+[if( Only inputMain Lot is filled and saved ){
+    disable the first input form ;
+   also enable display table1;  
+} elseif(all second form inputs is filled and saved){
+        disable second form inputs and their save button;
+        enable the reset button to be clicked;  
+    }elseif(reset button is clicked){
+        enable second form inputs;
+   } elseif(all third form inputs is filled and add1 button clicked){
+add new row in table1;
+send each inputed value to their specif td in table1;
+display tdLot No = inputStart Lot;
+allow inputing another new value;
+   }elseif(another value is inputed and added){
+    send each inputed value to their specific td in table1;
+    increment "tdLot No = inputstart Lot" by 1;
+   }elseif(added new rows = InputMain Lot){
+    disable the third form inputs;
+    display edit and cancel buttons, in each added table rows and enable editing the td inside the table or remove the table row;
+    display delete button on top right of the table and eneble deleting the whole table;
+    display proceed button on bottom right of the table; 
+   }elseif(proceed button is clicked){
+    display none h3 .catalogTitle;
+    display none form section;
+    display none edit and cancel inside the table;
+    display none delete button on top on table;
+    display block #cover1 and #cover2;
+display block table-container;
+    show functioning download option  "excel, pdf and print ",  
+   }else{
+    display block input form section container;
+    display block h3 .catalogTitle;
+   }.]
+   
+
+   [if( Only inputSecondary Lot is filled and saved ){
+    disable the fist form inputs;
+   display block table2;  
+} elseif(all second form inputs is filled and saved){
+        disable second form inputs and their save button;
+        enable the reset button to be clicked;  
+    }elseif(reset button is clicked){
+        enable second form inputs;
+   } elseif(all third form inputs is filled and add2 button clicked){
+add new row in table2;
+send each inputed value to their specif td in table2;
+display tdLot No = inputStart Lot;
+allow inputing another new value;
+   }elseif(another value is inputed and added){
+    send each inputed value to their specific td in table2;
+    increment "tdLot No = inputstart Lot" by 1;
+   }elseif(added new rows = InputMain Lot){
+    disable the second form inputs;
+    display edit and cancel buttons, in each added table rows and enable editing the td inside the table or remove the table row;
+    display delete button on top right of the table and eneble deleting the whole table;
+    display proceed button on bottom right of the table; 
+   }elseif(proceed button is clicked){
+    display none h3 .catalogTitle;
+    display none form section;
+    display none edit and cancel inside the table;
+    display none delete button on top on table;
+    display block #cover1 and #cover2;
+display block table-container;
+    show functioning download option  "excel, pdf and print ",  
+   }else{
+    display block input form section container;
+    display block h3 .catalogTitle;
+
+   }]
+   
+
+   
+   [if( Both inputMain Lot and inputSecondary Lot are filled and saved ){
+    disable the fist form inputs;
+   display block table1;  
+} elseif(all second form inputs is filled and saved){
+        disable second form inputs and their save button;
+        enable the reset button to be clicked;  
+    }elseif(reset button is clicked){
+        enable second form inputs;
+   } elseif(all third form inputs is filled and add1 button clicked){
+add new row in table1;
+send each inputed value to their specif td in table1;
+display tdLot No = inputStart Lot;
+allow inputing another new value;
+   }elseif(another value is inputed and added){
+    send each inputed value to their specific td in table1;
+    increment "tdLot No = inputstart Lot" by 1;
+   }elseif(added new rows = InputMain Lot){
+    display block table2;
+    display none add1 button;
+    enable inputs in third form;
+    display block add2 button;
+   }elseif(all third form inputs is filled and add2 button clicked){
+    add new row in table2;
+    send each inputed value to their specif td in table2;
+    display tdLot No = LastLot No + 1;
+    allow inputing another new value;
+       }elseif(another value is inputed and added){
+        send each inputed value to their specific td in table1;
+        increment "tdLot No = LasttdLot No + 1" by 1;
+       }elseif(added new rows = inputSecondary Lot){
+        disable the third form inputs;
+    display edit and cancel buttons, in each added table rows and enable editing the td inside the table or remove the table row;
+    display delete button on top right of the table and eneble deleting the whole table;
+    display proceed button on bottom right of the table; 
+   }elseif(proceed button is clicked){
+    display none h3 .catalogTitle;
+    display none form section;
+    display none edit and cancel inside the table;
+    display none delete button on top on table;
+    display block #cover1 and #cover2;
+display block table-container;
+    show functioning download option  "excel, pdf and print ",  
+   }else{
+    display block input form section container;
+    display block h3 .catalogTitle;
+
+   }
+   ]

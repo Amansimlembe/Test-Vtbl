@@ -1,0 +1,51 @@
+
+CREATE DATABASE brokers_db;
+USE brokers_db;
+
+CREATE TABLE IF NOT EXISTS brokers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    warehouse VARCHAR(255) NOT NULL,
+    mark VARCHAR(255) NOT NULL,
+    grade VARCHAR(255) NOT NULL,
+    manfDate DATE NOT NULL,
+    invoice VARCHAR(255) NOT NULL,
+    noOfPkgs INT NOT NULL,
+    types VARCHAR(255) NOT NULL,
+    netWeight DECIMAL(10,2) NOT NULL,
+    nature VARCHAR(255) NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
+CREATE TABLE lots (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    catalogue_entry_id INT,
+    lotNo INT,
+    mark VARCHAR(255),
+    grade VARCHAR(255),
+    noOfPkgs INT,
+    netWeight DECIMAL(10, 2),
+    nature VARCHAR(255),
+    warehouse VARCHAR(255),
+    manfDate DATE,
+    invoice VARCHAR(255),
+    types VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (catalogue_entry_id) REFERENCES catalogue_entries(id)
+);
+
+
+CREATE TABLE catalogue_entries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    mainLot INT,
+    secondaryLot INT,
+    auctionNo INT,
+    closingDate DATE,
+    startLot INT,
+    orderOfSale VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
